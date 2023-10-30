@@ -85,8 +85,8 @@ class Child_Process
 		si.wShowWindow = SW_NORMAL; // Prevents cmd window from flashing.
 		// Requires STARTF_USESHOWWINDOW in dwFlags.
 
-		isProcessCreated = CreateProcessW((LPWSTR)L"D:/Programing/Untracked/Processes/exampleprogram/x64/Debug/exampleprogram.exe",	//[in, optional]      LPCSTR                lpApplicationName,
-										(LPWSTR)L"helo asd1 asd2 asd3",	//[in, out, optional] LPSTR                 lpCommandLine,
+		isProcessCreated = CreateProcessW((LPWSTR)programPath.c_str(),	//[in, optional]      LPCSTR                lpApplicationName,
+										(LPWSTR)args.c_str(),	//[in, out, optional] LPSTR                 lpCommandLine,
 											NULL,	//[in, optional]      LPSECURITY_ATTRIBUTES lpProcessAttributes,
 											NULL,	//[in, optional]      LPSECURITY_ATTRIBUTES lpThreadAttributes,
 											TRUE,	//[in]                BOOL                  bInheritHandles,
